@@ -2,26 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#e0cef1] min-h-full text-zinc-900
+}
+
+.flex-centered {
+  @apply flex items-center;
+}
+
+.section {
+  @apply min-h-screen h-full pb-5 pt-[10%] pl-[8%]
+}
+
+/* fonts */
+.heading-1 {
+  @apply text-[7.5rem] font-bold leading-none uppercase
+}
+
+.heading-2 {
+  @apply text-[2.25rem] font-light leading-snug
+}
+
+.heading-3 {
+  @apply text-[2.5rem] font-normal uppercase
+}
+
+.heading-4 {
+  @apply text-[2.5rem] font-medium
+}
+
+.paragraph-1 {
+  @apply text-[1.25rem] font-normal text-black-3
+}
+
+.paragraph-3 {
+  @apply text-[1rem] font-bold uppercase
+}
+
+.paragraph-4 {
+  @apply text-[.8rem] font-light
+}
+
+.paragraph-5 {
+  @apply text-[.75rem]
+}
+
+.text-link {
+  @apply text-[1rem] font-bold uppercase text-black-3 hover:text-black-1
+}
+
+/* ui */
+.button {
+  @apply flex items-center justify-center py-2 text-[1rem] uppercase font-extrabold rounded-md border-[1px] shadow-sm hover:-translate-y-[.1rem]
+}
+.loading {
+  @apply min-w-[85%] min-h-[100%] z-20 absolute bg-white-1 flex flex-col items-center justify-center
+}
+
+.loading__content {
+  @apply block w-[150px] h-[150px] mt-[-75px] mb-0 mr-0 rounded-[50%] border-transparent border-4 border-t-primary-2 animate-spin
+}
+
+.shadow-1 {
+  box-shadow: 0 1px 3px 0 rgba(29, 29, 29, 0.05);
+}
+
+.profile-section {
+  @apply pt-10 min-h-full bg-gray-1
+}
+
+.profile-container {
+  @apply bg-white-1 w-[90%] mx-auto mb-auto rounded-xl flex flex-col
+}
+
+.profile-title {
+  @apply heading-4 text-center text-primary-2
+}
+
+.form-input {
+  @apply bg-gray-1 outline-none border-none rounded-lg mt-0 !important;
+}
+
+.top-bottom-bars {
+  @apply flex bg-primary-lighter items-center ml-[15%] w-[85%]
+}
+
+.cl-userButtonTrigger,
+.cl-internal-g6a67s,
+.cl-avatarBox,
+.cl-userButtonAvatarBox,
+.cl-internal-11ewti4 {
+  @apply opacity-0 absolute top-0 left-0 w-[180px] h-[42px] rounded-none
+}
+
+.cl-internal-11ewti4 img {
+  @apply invisible
+}
+
+.cl-avatarImage, .cl-userButtonAvatarImage {
+  @apply invisible
+}
+
+.cl-internal-b3fm6y {
+  @apply bg-primary-2
 }
