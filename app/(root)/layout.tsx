@@ -1,10 +1,12 @@
-import '../globals.css';
+
 import { ClerkProvider } from '@clerk/nextjs';
 import { Inter } from 'next/font/google';
 import Topbar from '@/components/shared/Topbar';
 import Leftbar from '@/components/shared/Leftbar';
 import Footer from '@/components/shared/Footer';
 
+import ProfilePhoto from '@/components/ui/profilephoto';
+import '../globals.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -22,10 +24,10 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <main className='flex flex-row h-[100%]'>
-            <Topbar />
+          <main className='flex h-[100%]'>
+            <Topbar> <ProfilePhoto optionalClassName='mx-2'/></Topbar>
             <Leftbar />
-            <div className='w-[85%] ml-[15%]'>
+            <div className='w-[100%] md:w-[85%] md:ml-[15%]'>
               {children}
             </div>
 

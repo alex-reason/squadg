@@ -9,11 +9,11 @@ interface MainButtonProps {
 const MainButton = ({ href, btnName, variant = 'primary' }: MainButtonProps) => {
     let btnClassName = ''
     if (variant === 'primary') {
-        btnClassName = 'bg-black-3 text-white-1 px-6 border-black-3'
+        btnClassName = 'bg-black-3 text-white-1 px-2 sm:px-6 border-black-3'
     } else if (variant === 'accent') {
-        btnClassName = 'bg-accent text-black-3 px-4 border-black-3'
+        btnClassName = 'bg-accent text-black-3 px-2 sm:px-4 border-black-3'
     } else if (variant === 'secondary') {
-        btnClassName = 'bg-white-1 text-primary-3 px-6 border-primary-1'
+        btnClassName = 'bg-white-1 text-primary-3 px-2 sm:px-6 border-primary-1'
     }
     return (
         <Link

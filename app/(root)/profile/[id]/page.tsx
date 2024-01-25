@@ -14,13 +14,13 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
     const user = await currentUser();
     const formattedDateJoined = formatDateString2(userInfo.dateJoined);
-    const accountSettingsButton = "bg-accent relative w-[180px] h-[42px] text-black-3 border-black-3 cursor-pointer flex items-center justify-center py-1 mt-4 text-[.8rem] uppercase font-extrabold rounded-md border-[1px] shadow-sm hover:-translate-y-[.1rem]";
+    const accountSettingsButton = "button bg-accent relative sm:min-w-[180px] h-[42px] text-black-3 border-black-3 cursor-pointer py-1 px-2 mt-4 ";
 
     return (
         <section className="profile-section mb-10">
-            <div className="profile-container p-8 mt-10 ">
-                <div className="flex items-end gap-10">
-                    <div className="flex flex-col items-center min-w-[50%] max-w-[50%]">
+            <div className="centered-section profile-container margin-padding-lg">
+                <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between md:justify-normal gap-10">
+                    <div className="flex flex-col items-center lg:min-w-[50%] max-w-[50%]">
                         <h3 className="profile-title">{userInfo?.username}</h3>
                         <Image src={userInfo?.avatar || ''} alt='user avatar; images from Blush by Pau Barbaro' height='100' width='100' className='w-30 h-30 object-contain' />
                         <p className="paragraph-4 text-center bg-primary-lighter rounded-full p-2">{userInfo.bio}</p>
@@ -40,7 +40,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
                 {
                     user?.id === params.id &&
-                    <div className="flex justify-start gap-4 mx-auto mt-10">
+                    <div className="flex justify-start gap-2 sm:gap-4 mx-auto sm:mt-10">
                         <MainButton
                             href='/profile/edit'
                             btnName="Update Profile"

@@ -11,7 +11,7 @@ body {
 }
 
 .section {
-  @apply min-h-screen h-full pb-5 pt-[10%] pl-[8%]
+  @apply min-h-screen h-full pb-5 pt-[10%] p-4 md:pl-[8%]
 }
 
 /* fonts */
@@ -20,43 +20,48 @@ body {
 }
 
 .heading-2 {
-  @apply text-[2.25rem] font-light leading-snug
+  @apply text-[1.3rem] md:text-[2.25rem] font-light leading-snug
 }
 
 .heading-3 {
-  @apply text-[2.5rem] font-normal uppercase
+  @apply text-[1.5rem] md:text-[2.5rem] font-normal uppercase
 }
 
 .heading-4 {
-  @apply text-[2.5rem] font-medium
+  @apply text-[1.5rem] md:text-[2.25rem] font-medium
 }
 
 .paragraph-1 {
-  @apply text-[1.25rem] font-normal text-black-3
+  @apply text-[1rem] md:text-[1.25rem] font-normal text-black-3
 }
 
 .paragraph-3 {
-  @apply text-[1rem] font-bold uppercase
+  @apply text-[.8rem] md:text-[1rem] font-bold uppercase
 }
 
 .paragraph-4 {
-  @apply text-[.8rem] font-light
+  @apply text-[.8rem] font-normal
 }
 
 .paragraph-5 {
-  @apply text-[.75rem]
+  @apply text-[.7rem] lg:text-[.75rem]
+}
+
+.paragraph-6 {
+  @apply text-[.5rem] lg:text-[.6rem]
 }
 
 .text-link {
-  @apply text-[1rem] font-bold uppercase text-black-3 hover:text-black-1
+  @apply text-[.8rem] sm:text-[1rem] font-bold uppercase text-black-3 hover:translate-y-[-.5px] hover:drop-shadow-sm
 }
 
 /* ui */
 .button {
-  @apply flex items-center justify-center py-2 text-[1rem] uppercase font-extrabold rounded-md border-[1px] shadow-sm hover:-translate-y-[.1rem]
+  @apply flex items-center justify-center py-2 text-[.7rem] lg:text-[1rem] uppercase font-extrabold rounded-md border-[1px] shadow-sm hover:-translate-y-[.1rem]
 }
+
 .loading {
-  @apply min-w-[85%] min-h-[100%] z-20 absolute bg-white-1 flex flex-col items-center justify-center
+  @apply min-w-[100%] md:min-w-[85%] min-h-[100%] z-20 absolute bg-white-1 flex flex-col items-center justify-center
 }
 
 .loading__content {
@@ -71,8 +76,16 @@ body {
   @apply pt-10 min-h-full bg-gray-1
 }
 
+.centered-section {
+  @apply bg-white-1 mx-auto rounded-xl flex flex-col
+}
+
+.margin-padding-lg {
+  @apply mt-10 p-8
+}
+
 .profile-container {
-  @apply bg-white-1 w-[90%] mx-auto mb-auto rounded-xl flex flex-col
+  @apply w-[90%] mb-auto
 }
 
 .profile-title {
@@ -84,7 +97,7 @@ body {
 }
 
 .top-bottom-bars {
-  @apply flex bg-primary-lighter items-center ml-[15%] w-[85%]
+  @apply flex bg-primary-lighter items-center md:ml-[15%] md:w-[85%]
 }
 
 .cl-userButtonTrigger,

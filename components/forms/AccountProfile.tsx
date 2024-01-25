@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { UserValidation } from "@/lib/validations/user";
 import { updateUser } from "@/lib/actions/user.actions";
 import { Form, FormField, FormItem, } from "@/components/ui/form";
-import { Input, Textarea, Button, MainButton, CondensedFormItem, FormButton } from "@/components/ui";
+import { Input, Textarea, MainButton, CondensedFormItem, FormButton } from "@/components/ui";
 import { defaultAvatar, avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9, avatar17 } from "@/public";
 import { FaCheckCircle } from "react-icons/fa";
 
@@ -65,11 +65,12 @@ const AccountProfile = ({ user, btnTitle, onboarding }: AccountProps) => {
         <Form {...form}>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className={onboarding ? "profile-container p-4" : "profile-container my-10 p-8"}>
+                className={`centered-section profile-container ${onboarding ? "p-4" : "margin-padding-lg"}`}
+            >
 
                 {!onboarding && <h3 className="profile-title mb-4">Update Profile</h3>}
-                <div className={`flex ${onboarding && "flex-col"}`}>
-                    <div className="flex flex-col flex-1 justify-start mr-[5rem]">
+                <div className={`flex flex-col lg:flex-row ${onboarding && "flex-col"}`}>
+                    <div className="flex flex-col flex-1 justify-center md:justify-start lg:mr-[5rem]">
 
                         {/* username */}
                         <FormField
@@ -103,7 +104,7 @@ const AccountProfile = ({ user, btnTitle, onboarding }: AccountProps) => {
                     {/* avatar */}
                     <div className="flex flex-1 flex-col">
                         <p className="paragraph-3 text-black-3 min-w-[10rem]">Avatar:</p>
-                        <div className="grid grid-cols-3 gap-0 w-[80%]">
+                        <div className="grid grid-cols-3 gap-0 w-[100%] lg:w-[80%]">
                             {
                                 avatarList.map((imageLink, index) => (
                                     <div className="mr-2 w-fit relative" key={index}>
@@ -120,8 +121,8 @@ const AccountProfile = ({ user, btnTitle, onboarding }: AccountProps) => {
                 </div>
 
                 <div className="flex justify-start gap-4 mt-10">
-                <FormButton btnName={btnTitle} optionalClassName="mt-4"/>
-                     {!onboarding &&
+                    <FormButton btnName={btnTitle} optionalClassName="mt-4" />
+                    {!onboarding &&
                         <MainButton href={`/profile/${user.id}`} btnName="Cancel" variant="secondary" />
                     }
                 </div>

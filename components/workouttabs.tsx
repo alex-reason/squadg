@@ -5,10 +5,10 @@ interface WorkoutTabsProps {
 };
 
 const WorkoutTabs = ({ category, setCategory, optionalClassName }: WorkoutTabsProps) => {
-    const tabClassName = 'py-1 px-8 text-link';
+    const tabClassName = 'py-1 px-2 sm:px-8 text-link';
 
     return (
-        <div className={`w-[90%] mx-auto absolute ${optionalClassName}`}>
+        <div className={`w-[90%] mx-auto ${optionalClassName}`}>
             <button
                 type='button'
                 className={`${tabClassName} rounded-tl-lg ${category === 'cardio' ? 'bg-accent' : 'bg-gray-2'}`}

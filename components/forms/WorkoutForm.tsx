@@ -9,7 +9,7 @@ import { updateUserWorkout } from '@/lib/actions/user.actions';
 import { Form, FormField, FormItem } from "@/components/ui/form";
 import { Input, FormButton, CondensedFormItem } from '@/components/ui';
 import PointSystem from '@/components/pointsystem';
-import WorkoutTabs from '@/components/WorkoutTabs';
+import WorkoutTabs from '@/components/workouttabs';
 
 interface WorkoutFormProps {
     userId: string,
@@ -102,15 +102,15 @@ const WorkoutForm = ({ userId, workoutInfo, userLevel }: WorkoutFormProps) => {
     };
 
     const formClassName = 'bg-white min-h-[30rem] pb-0 rounded-lg w-[90%] m-auto flex flex-col justify-between';
-    const formItemClassName = 'flex items-center w-[60%] mb-2';
+    const formItemClassName = 'flex items-center w-[100%] lg:w-[60%] mb-2';
 
     return (
-        <div className='mt-[4%] relative'>
+        <div className='mt-[4%]'>
             <WorkoutTabs category={category} setCategory={setCategory} optionalClassName='left-14 -top-[2rem]' />
 
             <Form {...form} >
                 <form onSubmit={form.handleSubmit(onSubmit)} className={formClassName}>
-                    <div className='flex flex-col gap-2 px-[4rem] pt-[2rem]'>
+                    <div className='flex flex-col gap-2 p-4 sm:px-[4rem] pt-[2rem]'>
 
                         {/* **** CATEGORY: CARDIO **** */}
                         {category === 'cardio' &&

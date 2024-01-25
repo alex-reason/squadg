@@ -15,11 +15,10 @@ interface UserCardProps {
 
 const UserCard = ({ userInfo }: UserCardProps) => {
     return (
-        <Link href={`/profile/${userInfo.id}`}>
-            <article className='bg-[#fdfdfdaa] flex flex-col items-center justify-between w-[10rem] h-[15rem] p-2 rounded-lg hover:-translate-y-[.1rem]'>
-
+        <Link href={`/profile/${userInfo.id}`} className='w-auto'>
+            <article className='bg-[#fdfdfdaa] flex flex-col items-center justify-between w-[10rem] h-[14rem] p-2 rounded-lg hover:-translate-y-[.1rem]'>
                 <div className='flex flex-col items-center pt-4 relative'>
-                    <Image src={userInfo?.avatar || ''} alt='user avatar; images from Blush by Pau Barbaro' height='100' width='100' className='w-20 h-20 object-contain' />
+                    <Image src={userInfo?.avatar || ''} alt='user avatar; images from Blush by Pau Barbaro' height='100' width='100' className='h-20 w-20 object-contain' />
                     <p className='paragraph-3 text-primary-2'>
                         {userInfo?.username}
                     </p>

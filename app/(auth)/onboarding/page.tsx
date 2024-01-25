@@ -22,7 +22,7 @@ async function Page() {
     };
 
     return (
-        <main className="mx-auto flex w-[60%] flex-col justify-start px-2 py-4 bg-white-1 rounded-xl">
+        <main className="centered-section justify-start px-2 py-4 w-[60%]">
             <h3 className="mt-3 heading-4 text-center">
                 Complete your profile
             </h3>

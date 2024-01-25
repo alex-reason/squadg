@@ -7,7 +7,7 @@ const Leftbar = async () => {
   const result = !user ? null : await fetchTopUsers();
 
   return (
-    <div className="w-[15%] min-h-screen h-full bg-white fixed border-r-2 border-black-3">
+    <div className="hidden md:flex md:flex-wrap w-[15%] min-h-screen h-full bg-white fixed border-r-2 border-black-3">
       {!result || result?.users?.length === 0 ? (
         ''
       ) : (
@@ -19,8 +19,8 @@ const Leftbar = async () => {
                 username: person.username,
                 avatar: person.avatar,
                 points: person.totalPoints,
-                level: person.level
               }}
+              optionalClassNames="w-7 h-7 lg:w-10 lg:h-10"
               key={person.id}
             />
           ))}
