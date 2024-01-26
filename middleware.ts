@@ -1,6 +1,4 @@
 // Resource: https://clerk.com/docs/nextjs/middleware#auth-middleware
-// Copy the middleware code as it is from the above resource
-import { NextResponse } from 'next/server';
 import { authMiddleware, redirectToSignIn, redirectToSignUp } from "@clerk/nextjs";
 
 export default authMiddleware({
