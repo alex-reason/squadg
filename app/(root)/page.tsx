@@ -10,9 +10,9 @@ export default async function Home() {
 
   return (
     <main className="min-h-full text-black-3 lg:p-0">
-      <section className="section flex flex-col m-auto items-center md:items-start justify-center p-4">
+      <section className="section flex flex-col m-auto items-center md:items-start mt-10  p-4">
         {
-            <Image src={homeTitle} className="h-[10rem] w-auto md:ml-[-2rem] object-contain" alt='images from Blush by Pau Barbaro' />
+            <Image src={homeTitle} className="h-[10rem] w-auto md:ml-[-2rem] object-contain " alt='images from Blush by Pau Barbaro' />
           ||
           <h1 className="heading-1 mt-[20%] ">
             Squad Gains
