@@ -22,9 +22,9 @@ async function Page() {
   };
 
   return (
-      <section className='profile-section m-auto mb-10'>
-        <AccountProfile user={userData} btnTitle='Apply Changes' onboarding={false}/>
-      </section>
+    <section className='profile-section m-auto mb-10'>
+      <AccountProfile user={userData} btnTitle='Apply Changes' onboarding={false} />
+    </section>
   );
 }
 

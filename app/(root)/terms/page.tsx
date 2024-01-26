@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { termsOfUse } from "@/public";
 import logo from '@/public/assets/logo.png';
+import { termsOfUse } from "@/public";
 
 const page = () => {
   return (

@@ -1,4 +1,3 @@
-
 import { ClerkProvider } from '@clerk/nextjs';
 import { Inter } from 'next/font/google';
 import Topbar from '@/components/shared/Topbar';
@@ -25,12 +24,11 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <main className='flex h-[100%]'>
-            <Topbar> <ProfilePhoto optionalClassName='mx-2'/></Topbar>
+            <Topbar> <ProfilePhoto optionalClassName='mx-2' /></Topbar>
             <Leftbar />
             <div className='w-[100%] md:w-[85%] md:ml-[15%]'>
               {children}
             </div>
-
           </main>
           <Footer />
         </body>
