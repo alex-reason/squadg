@@ -1,5 +1,4 @@
 "use server"
-import { SortOrder, FilterQuery } from "mongoose";
 import { revalidatePath } from "next/cache";
 import { connectToDB } from "@/lib/mongoose";
 import User from "@/lib/models/user.model";
@@ -73,9 +72,6 @@ export async function fetchAllUsers() {
 export async function fetchTopUsers() {
     try {
         connectToDB();
-        // const usersQuery = User.find()
-        // const users = await usersQuery.exec();
-
         const usersQuery = User.find()
             .sort({ totalPoints: -1 })
             .limit(10)
@@ -86,7 +82,6 @@ export async function fetchTopUsers() {
         console.error("Error fetching users:", error);
     }
 };
-
 
 // update workout
 interface workoutUpdateParams {
@@ -115,7 +110,6 @@ interface workoutUpdateParams {
 export async function updateUserWorkout({
     userId,
     workouts,
-    userLevel
 }: workoutUpdateParams): Promise<void> {
     try {
         connectToDB();

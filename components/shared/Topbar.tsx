@@ -4,7 +4,7 @@ import { SignedIn, SignOutButton, useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { PiSignOutBold } from "react-icons/pi";
 import { MdLibraryAdd } from "react-icons/md";
-import { BsFillPeopleFill, BsTrophyFill } from "react-icons/bs";
+import { BsFillPeopleFill } from "react-icons/bs";
 import { RiTrophyFill } from "react-icons/ri";
 
 const Topbar = ({ children }: { children?: React.ReactNode }) => {
