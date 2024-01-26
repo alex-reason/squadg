@@ -5,7 +5,7 @@ import { authMiddleware, redirectToSignIn, redirectToSignUp } from "@clerk/nextj
 
 export default authMiddleware({
   // An array of public routes that don't require authentication.
-  publicRoutes: ["/", "/sign-up",'/about','/sign-in',"/api/webhook/clerk"],
+  publicRoutes: ["/", "/sign-up",'/about','/sign-in',"/api/webhook/clerk", "/terms"],
 
   // An array of routes to be ignored by the authentication middleware.
   ignoredRoutes: ["/api/webhook/clerk"],
