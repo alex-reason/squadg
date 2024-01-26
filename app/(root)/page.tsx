@@ -41,7 +41,7 @@ export default async function Home() {
         }
       </section>
 
-      <About />
+      <About user={user ? true : false} />
     </main>
   )
 }
