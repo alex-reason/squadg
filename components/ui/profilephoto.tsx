@@ -1,7 +1,7 @@
 
 import { fetchUser } from "@/lib/actions/user.actions";
 import { currentUser } from "@clerk/nextjs";
-import avatarDefault from "@/public/assets/avatars/Default.png"
+import avatarDefault from "@/public/assets/Default.png"
 import Image from "next/image";
 
 const ProfilePhoto = async ({ optionalClassName }: { optionalClassName?: string }) => {
