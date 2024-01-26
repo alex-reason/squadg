@@ -38,7 +38,7 @@ const Topbar = ({ children }: { children?: React.ReactNode }) => {
                 </SignOutButton>
             </SignedIn>
 
-            {!userId && <Link href="/sign-in" className={navLinkClass} >Login</Link>}
+            {!userId && <Link href="/sign-in" className="cursor-pointer mx-2 text-link">Login</Link>}
 
         </nav>
     )
