@@ -1,9 +1,8 @@
 import Image from 'next/image';
-import MainButton from "@/components/ui/mainbutton";
 import logo from '@/public/assets/logo.png'
 import { aboutData as data } from '@/public/assets/data';
 
-const About = ({ user }: { user: boolean }) => {
+const About = () => {
     return (
         <section className='section pl-[8%] mt-[5%] bg-white-1 flex flex-col items-center md:items-start justify-center p-4'>
             <Image src={logo} alt='squad gains logo' className="h-[5rem] w-[5rem]" />
@@ -24,7 +23,7 @@ const About = ({ user }: { user: boolean }) => {
                     </div>
                 </div>
             ))}
-            {!user && <MainButton href='/sign-up' btnName='Sign Up' />}
+            {/* {!user && <MainButton href='/sign-up' btnName='Sign Up' />} */}
         </section>
     )
 };
