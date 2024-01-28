@@ -13,6 +13,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
     if (!userInfo?.username) redirect("/onboarding");
 
     const user = await currentUser();
+    console.log(user)
     const formattedDateJoined = formatDateString2(userInfo.dateJoined);
     const accountSettingsButton = "button bg-accent relative sm:min-w-[180px] h-[42px] text-black-3 border-black-3 cursor-pointer py-1 px-2 mt-4 ";
 
