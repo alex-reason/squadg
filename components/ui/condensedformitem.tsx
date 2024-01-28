@@ -14,7 +14,7 @@ const CondensedFormItem = ({ children, label, profileForm = false }: { children:
                     <FormControl>
                         {children}
                     </FormControl>
-                    <FormMessage className='text-[0.5rem] pt-2 absolute'></FormMessage>
+                    <FormMessage className='text-[0.5rem] pt-6 absolute'></FormMessage>
                 </div>
                 :
                 <>
