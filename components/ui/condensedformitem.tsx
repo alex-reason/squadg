@@ -14,18 +14,16 @@ const CondensedFormItem = ({ children, label, profileForm = false }: { children:
                     <FormControl>
                         {children}
                     </FormControl>
-                    <FormMessage className='text-[0.5rem] pt-6 absolute'></FormMessage>
+                    <FormMessage className={`text-[0.4rem] pt-6 absolute ${profileForm ? 'min-w-[5rem] md:min-w-[10rem]' : 'min-w-[14rem]'}`}></FormMessage>
                 </div>
                 :
                 <>
                     <FormControl>
                         {children}
                     </FormControl>
-                    <FormMessage className='text-[0.5rem] pt-6 absolute'></FormMessage>
+                    <FormMessage className={`text-[0.4rem] pt-6 absolute ${profileForm ? 'min-w-[5rem] md:min-w-[10rem]' : 'min-w-[14rem]'}`}></FormMessage>
                 </>
             }
-
-
         </div>
     )
 }
