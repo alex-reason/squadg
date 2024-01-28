@@ -137,3 +137,26 @@ export async function updateUserWorkout({
     }
 };
 
+
+
+
+export async function deletedUser(userId: string) {
+    try {
+        connectToDB();
+
+        // Find the community by its ID and delete it
+        const deletedUser = await User.findOneAndDelete({
+            id: userId,
+        });
+
+        if (!deletedUser) {
+            throw new Error("User not found");
+        }
+
+    
+        return deletedUser;
+    } catch (error) {
+        console.error("Error deleting user: ", error);
+        throw error;
+    }
+};
