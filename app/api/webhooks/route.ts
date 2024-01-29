@@ -41,8 +41,6 @@ export const POST = async (request: Request) => {
 
     const eventType: EventType = evnt?.type!;
 
-
-    // Listen organization deletion event
     if (eventType === "user.deleted") {
         try {
             // Resource: https://clerk.com/docs/reference/backend-api/tag/Organizations#operation/DeleteOrganization
