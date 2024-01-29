@@ -16,9 +16,9 @@ const Page = async ({ params }: { params: { id: string } }) => {
     const user = await currentUser();
     const formattedDateJoined = formatDateString2(userInfo.dateJoined);
     const accountSettingsButton = "button bg-accent relative sm:min-w-[180px] h-[42px] text-black-3 border-black-3 cursor-pointer py-1 px-2 mt-4 ";
-    const handleDelete = (userId: string) => {
-        DELETE(userId)
-    }
+    // const handleDelete = (userId: string) => {
+    //     DELETE(userId)
+    // }
 
     return (
         <section className="profile-section mb-10">
@@ -50,12 +50,12 @@ const Page = async ({ params }: { params: { id: string } }) => {
                             btnName="Update Profile"
                             variant="primary"
                         />
-                        {/* <div className={accountSettingsButton}>
+                        <div className={accountSettingsButton}>
                             <IoSettingsOutline />
                             <p className="ml-1">Account Settings</p>
                             <UserButton />
-                        </div> */}
-                        <button type='button' onClick={() => (handleDelete(user.id))}>Delete</button>
+                        </div>
+                        {/* <button type='button' onClick={() => (handleDelete(user.id))}>Delete</button> */}
                     </div>
                 }
 
