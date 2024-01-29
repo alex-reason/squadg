@@ -1,6 +1,6 @@
 import { Webhook, WebhookRequiredHeaders } from "svix";
 import { headers } from "next/headers";
-
+import { clerkClient } from "@clerk/nextjs";
 import { IncomingHttpHeaders } from "http";
 
 import { NextResponse } from "next/server";
@@ -13,6 +13,18 @@ type Event = {
     object: "event";
     type: EventType;
 };
+
+export async function DELETE(userId: string) {
+
+    try {
+        await clerkClient.users.deleteUser(userId);
+        return NextResponse.json({ message: 'Success' });
+    }
+    catch (error) {
+        console.log(error);
+        return NextResponse.json({ error: 'Error deleting user' });
+    }
+}
 
 export const POST = async (request: Request) => {
     const payload = await request.json();
