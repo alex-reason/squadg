@@ -7,7 +7,7 @@ import MainButton from "@/components/ui/mainbutton";
 import Image from "next/image";
 import WorkoutProfile from "@/components/workoutprofile";
 import { IoSettingsOutline } from "react-icons/io5";
-import { DELETE } from "@/app/api/webhooks/route";
+import { DELETE } from "@/app/api/private/route";
 
 const Page = async ({ params }: { params: { id: string } }) => {
     const userInfo = JSON.parse(JSON.stringify(await fetchUser(params.id)));
@@ -16,8 +16,8 @@ const Page = async ({ params }: { params: { id: string } }) => {
     const user = await currentUser();
     const formattedDateJoined = formatDateString2(userInfo.dateJoined);
     const accountSettingsButton = "button bg-accent relative sm:min-w-[180px] h-[42px] text-black-3 border-black-3 cursor-pointer py-1 px-2 mt-4 ";
-    const handleDelete = async () => {
-        await DELETE (params.id)
+    const handleDelete = async (userId: string) => {
+        await DELETE(userId)
     }
 
     return (
@@ -55,7 +55,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
                             <p className="ml-1">Account Settings</p>
                             <UserButton />
                         </div> */}
-                    <button type='button' onClick={handleDelete}>Delete</button>
+                        <button type='button' onClick={handleDelete(user.id)}>Delete</button>
                     </div>
                 }
 
