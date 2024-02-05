@@ -6,10 +6,11 @@ import Footer from '@/components/shared/Footer';
 import ProfilePhoto from '@/components/ui/profilephoto';
 import '../globals.css';
 const inter = Inter({ subsets: ['latin'] })
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Squad Gains',
-  description: 'A Fitness Tracker that help motivate you and your friends. Created with Next.js'
+  description: 'Squad Gains is a Fitness Tracker that help motivate you and your friends. Created with Next.js'
 };
 
 export default function RootLayout({
