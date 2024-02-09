@@ -1,12 +1,11 @@
 import { Webhook, WebhookRequiredHeaders } from "svix";
 import { headers } from "next/headers";
-import { clerkClient } from "@clerk/nextjs";
 import { IncomingHttpHeaders } from "http";
 
 import { NextResponse } from "next/server";
 import { deletedUser } from "@/lib/actions/user.actions";
 
-type EventType = "user.deleted";
+type EventType = "user.deleted" | "user.created";
 
 type Event = {
     data: Record<string, string | number | Record<string, string>[]>;
@@ -40,6 +39,28 @@ export const POST = async (request: Request) => {
     }
 
     const eventType: EventType = evnt?.type!;
+
+    
+    if (eventType === "user.created") {
+        try {
+            // Resource: https://clerk.com/docs/reference/backend-api/tag/Organizations#operation/DeleteOrganization
+            // Show what evnt?.data sends from above resource
+            const { id } = evnt?.data;
+            console.log("user created", evnt?.data);
+
+            return NextResponse.json(
+                { message: "User created" },
+                { status: 201 }
+            );
+        } catch (err) {
+            console.log(err);
+
+            return NextResponse.json(
+                { message: "Internal Server Error" },
+                { status: 500 }
+            );
+        }
+    }
 
     if (eventType === "user.deleted") {
         try {
