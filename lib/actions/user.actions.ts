@@ -137,9 +137,6 @@ export async function updateUserWorkout({
     }
 };
 
-
-
-
 export async function deletedUser(userId: string) {
     try {
         connectToDB();
@@ -153,7 +150,6 @@ export async function deletedUser(userId: string) {
             throw new Error("User not found");
         }
 
-    
         return deletedUser;
     } catch (error) {
         console.error("Error deleting user: ", error);

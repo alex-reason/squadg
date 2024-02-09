@@ -10,7 +10,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Squad Gains',
-  description: 'Squad Gains is a Fitness Tracker that help motivate you and your friends. Created with Next.js'
+  description: 'Squad Gains is a Fitness Tracker that you can integrate in your workout routine and help motivate you and your friends. Created with Next.js'
 };
 
 export default function RootLayout({
