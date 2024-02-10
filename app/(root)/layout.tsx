@@ -28,6 +28,7 @@ export default function RootLayout({
             <Leftbar />
             <div className='w-[100%] md:w-[85%] md:ml-[15%]'>
               {children}
+              <SpeedInsights/> 
             </div>
           </main>
           <Footer />
