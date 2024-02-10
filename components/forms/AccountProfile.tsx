@@ -6,7 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { UserValidation } from "@/lib/validations/user";
-import { updateUser } from "@/lib/actions/user.actions";
+import { deletedUser, updateUser } from "@/lib/actions/user.actions";
 import { Form, FormField, FormItem, } from "@/components/ui/form";
 import { Input, Textarea, MainButton, CondensedFormItem, FormButton } from "@/components/ui";
 import { defaultAvatar, avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9, avatar17 } from "@/public";
@@ -63,6 +63,8 @@ const AccountProfile = ({ user, btnTitle, onboarding }: AccountProps) => {
 
     return (
         <Form {...form}>
+
+            <button type="button" onClick={() => deletedUser(user.id)}>Delete account</button>
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
                 className={`centered-section profile-container ${onboarding ? "p-4" : "margin-padding-lg"}`}

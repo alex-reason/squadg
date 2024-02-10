@@ -144,7 +144,7 @@ export async function POST(req: Request) {
     if (eventType === "user.deleted") {
         try {
             // @ts-ignore
-            await deletedUser(id);
+            await deletedUser(evt["data"]["id"]);
         } catch (err) {
             console.log(err);
         }

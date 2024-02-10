@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import Topbar from '@/components/shared/Topbar';
 import Leftbar from '@/components/shared/Leftbar';
 import Footer from '@/components/shared/Footer';
-import ProfilePhoto from '@/components/ui/profilephoto';
 import '../globals.css';
 const inter = Inter({ subsets: ['latin'] })
 import type { Metadata } from 'next';
@@ -24,7 +23,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <main className='flex h-[100%]'>
-            <Topbar> <ProfilePhoto optionalClassName='mx-2' /></Topbar>
+            <Topbar />
             <Leftbar />
             <div className='w-[100%] md:w-[85%] md:ml-[15%]'>
               {children}

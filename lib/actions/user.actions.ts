@@ -139,11 +139,9 @@ export async function updateUserWorkout({
 
 export async function deletedUser(userId: string) {
     try {
-        connectToDB();
-
-        // Find the community by its ID and delete it
+        connectToDB()
         const deletedUser = await User.findOneAndDelete({
-            id: userId,
+            id: userId
         });
 
         if (!deletedUser) {

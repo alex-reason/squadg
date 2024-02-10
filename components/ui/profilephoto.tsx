@@ -1,4 +1,4 @@
-
+'use server';
 import { fetchUser } from "@/lib/actions/user.actions";
 import { currentUser } from "@clerk/nextjs";
 import avatarDefault from "@/public/assets/Default.png"
@@ -14,7 +14,7 @@ const ProfilePhoto = async ({ optionalClassName }: { optionalClassName?: string 
             width='100'
             height='100'
             alt='profile avatar'
-            className={`w-10 h-10 ${optionalClassName} hover:translate-y-[-.5px] hover:drop-shadow-sm object-contain `}
+            className={`w-10 h-10 ${optionalClassName} hover:translate-y-[-.5px] hover:drop-shadow-sm object-contain absolute z-50 right-0 top-0`}
         />
     );
 }

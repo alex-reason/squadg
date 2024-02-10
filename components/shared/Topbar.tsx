@@ -7,7 +7,7 @@ import { MdLibraryAdd } from "react-icons/md";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { RiTrophyFill } from "react-icons/ri";
 
-const Topbar = ({ children }: { children?: React.ReactNode }) => {
+const Topbar = () => {
     const { userId } = useAuth();
     const router = useRouter();
     const navLinkClass = "cursor-pointer mx-2 text-link hidden sm:block";
@@ -20,7 +20,7 @@ const Topbar = ({ children }: { children?: React.ReactNode }) => {
             </Link>
             <SignedIn>
                 <Link href={`/profile/${userId}`} className="flex">
-                    {children}
+                    <p className={navLinkClass}>Profile</p>
                 </Link>
                 <Link href="/workout" >
                     <p className={navLinkClass}>Add Workout</p>
