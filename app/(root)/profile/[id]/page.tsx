@@ -55,7 +55,6 @@ const Page = async ({ params }: { params: { id: string } }) => {
                             <p className="ml-1">Account Settings</p>
                             <UserButton />
                         </div>
-                        {/* <button type='button' onClick={() => (handleDelete(user.id))}>Delete</button> */}
                     </div>
                 }
 

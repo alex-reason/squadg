@@ -70,15 +70,15 @@ const WorkoutProfile = ({ workoutInfo }: WorkoutInfoProps) => {
                 {category === 'toning' &&
                     <div>
                         <UserInfoContainer
-                            title='Sports'
+                            title='Upper toning reps'
                             info={workoutInfo?.toning?.upperReps ? `${workoutInfo?.toning?.upperReps} reps` : '0'}
                         />
                         <UserInfoContainer
-                            title='yoga'
+                            title='Lower toning reps'
                             info={workoutInfo?.toning?.lowerReps ? `${workoutInfo?.toning?.lowerReps} reps` : '0'}
                         />
                         <UserInfoContainer
-                            title='pilates'
+                            title='Core toning reps'
                             info={workoutInfo?.toning?.coreReps ? `${workoutInfo?.toning?.coreReps} reps` : '0'}
                         />
                     </div>
