@@ -1,6 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs';
 import { Inter } from 'next/font/google';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Topbar from '@/components/shared/Topbar';
 import Leftbar from '@/components/shared/Leftbar';
 import Footer from '@/components/shared/Footer';
@@ -28,7 +27,6 @@ export default function RootLayout({
             <Leftbar />
             <div className='w-[100%] md:w-[85%] md:ml-[15%]'>
               {children}
-              <SpeedInsights/> 
             </div>
           </main>
           <Footer />

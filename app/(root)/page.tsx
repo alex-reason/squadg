@@ -24,11 +24,6 @@ export default async function Home() {
             Where friends and fitness come together
           </h3>
         </div>
-        <div className="flex flex-col md:pr-[4rem] mx-auto mt-[20%]">
-          <Image src={defaultPhoto} className="h-10 w-10 mt-10 drop-shadow-md" alt="donut by Pau Barbarp" />
-          <Image src={defaultPhoto} className="h-10 w-10  mt-10 drop-shadow-md" alt="donut by Pau Barbarp" />
-          <Image src={defaultPhoto} className="h-10 w-10 mt-10 drop-shadow-md" alt="donut by Pau Barbarp" />
-        </div>
       </section>
 
       <section className="min-h-screen h-full flex flex-col items-center text-center justify-center p-4 lg:px-2">
