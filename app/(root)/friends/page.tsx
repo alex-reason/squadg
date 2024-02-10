@@ -18,7 +18,7 @@ const page = async () => {
       {!result || result.users.length === 0 ? (
         <p className='no-result'>No Result</p>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mt-10 m-auto justify-items-center">
+        <div className="flex flex-col items-center sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-2 mt-10 m-auto justify-items-center">
           {result.users.map((person: any) => (
             <UserCard
               userInfo={{

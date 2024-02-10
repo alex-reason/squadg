@@ -3,9 +3,13 @@ import Link from "next/link"
 import { SignedIn, SignOutButton, useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { PiSignOutBold } from "react-icons/pi";
-import { MdLibraryAdd } from "react-icons/md";
+import { IoTrophyOutline } from "react-icons/io5";
 import { BsFillPeopleFill } from "react-icons/bs";
 import { RiTrophyFill } from "react-icons/ri";
+import { IoAddCircleOutline } from "react-icons/io5";
+import { IoPeopleOutline } from "react-icons/io5";
+import { IoAddCircleSharp } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
 const Topbar = () => {
     const { userId } = useAuth();
@@ -21,17 +25,18 @@ const Topbar = () => {
             <SignedIn>
                 <Link href={`/profile/${userId}`} className="flex">
                     <p className={navLinkClass}>Profile</p>
+                    <CgProfile className={`${smallNavLinkClass} sm:hidden`} />
                 </Link>
                 <Link href="/workout" >
                     <p className={navLinkClass}>Add Workout</p>
-                    <MdLibraryAdd className={`${smallNavLinkClass} sm:hidden`} />
+                    <IoAddCircleOutline className={`${smallNavLinkClass} sm:hidden`} />
                 </Link>
                 <Link href="/friends">
                     <p className={navLinkClass}>Friends</p>
-                    <BsFillPeopleFill className={`${smallNavLinkClass} sm:hidden`} />
+                    <IoPeopleOutline className={`${smallNavLinkClass} sm:hidden`} />
                 </Link>
                 <Link href="/chart">
-                    <RiTrophyFill className={`${smallNavLinkClass} md:hidden`} />
+                    <IoTrophyOutline className={`${smallNavLinkClass} md:hidden`} />
                 </Link>
                 <SignOutButton signOutCallback={() => router.push("/sign-in")}>
                     <PiSignOutBold className={smallNavLinkClass} />
