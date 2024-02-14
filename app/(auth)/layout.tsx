@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <div className='w-full flex-centered flex-col justify-center min-h-screen'>
                         <Link href='/' className='flex flex-col items-center'>
                             <Image src={logo} alt='squad gains logo' className="h-[3rem] w-[3rem]" />
-                            <h1 className='paragraph-3 mb-2 text-primary-3'>Squad Gains</h1>
+                            <h1 className='paragraph-2 mb-2 text-primary-3'>Squad Gains</h1>
                         </Link>
                         {children}
                     </div>

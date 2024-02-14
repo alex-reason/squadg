@@ -27,7 +27,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
                     <div className="flex flex-col items-center lg:min-w-[50%] max-w-[50%]">
                         <h3 className="profile-title">{userInfo?.username}</h3>
                         <Image src={userInfo?.avatar || ''} alt='user avatar; images from Blush by Pau Barbaro' height='100' width='100' className='w-30 h-30 object-contain' />
-                        <p className="paragraph-4 text-center bg-primary-lighter rounded-full p-2">{userInfo.bio}</p>
+                        <p className="paragraph-3 text-center bg-primary-lighter rounded-full p-2">{userInfo.bio}</p>
                     </div>
 
                     <div className="flex flex-col">

@@ -15,7 +15,7 @@ const page = async () => {
                 <div className="flex flex-col items-start justify-start w-[90%] pl-[1rem] mt-[3rem]">
                     {result?.users?.map((person: any, index) => (
                         <div key={person.id} className="flex flex-row w-[100%] items-center gap-4">
-                            <p className="paragraph-1">{index + 1}</p>
+                            <p className="paragraph-1 text-black-3">{index + 1}</p>
                             <UserLabel
                                 userInfo={{
                                     id: person.id,

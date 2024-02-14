@@ -22,7 +22,7 @@ export default async function Home() {
               Squad Gains
             </h1>
           }
-          <h3 className="paragraph-1 py-1 px-2 w-[100%] md:w-[90%] text-center">Where friends and fitness come together</h3>
+          <h3 className="paragraph-1 text-gray-1 py-1 px-2 w-[100%] md:w-[90%] text-center">Where friends and fitness come together</h3>
         </div>
 
         <div className="mx-auto md:pr-10 min-h-[80vh] flex flex-col justify-center items-center w-[100%]">

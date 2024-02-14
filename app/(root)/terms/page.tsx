@@ -9,10 +9,10 @@ const page = () => {
       {termsOfUse.map((term, index) =>
       (
         <div key={index} className="w-[90%]">
-          <p className="paragraph-3">{term.title}</p>
+          <p className="paragraph-2">{term.title}</p>
           {
             term.content.map((info, index) => (
-              <p className="paragraph-5 my-1" key={index}>{info}</p>
+              <p className="paragraph-4 my-1" key={index}>{info}</p>
             ))
           }
         </div>

@@ -22,10 +22,10 @@ const UserLabel = ({ userInfo, optionalClassNames }: UserLabelProps) => {
                     height='100' width='100' 
                     className={`${optionalClassNames} object-contain`} />
                     <div className='flex flex-col'>
-                        <p className='paragraph-5 text-primary-3 font-bold'>
+                        <p className='paragraph-4 text-primary-3 font-bold'>
                             {userInfo?.username}
                         </p>
-                        <p className='paragraph-5 text-black-4 font-normal'>
+                        <p className='paragraph-4 text-black-4 font-normal'>
                             {`${userInfo?.points} pts` || 'N/A'}
                         </p>
                     </div>

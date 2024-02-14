@@ -32,27 +32,23 @@ body {
 }
 
 .paragraph-1 {
-  @apply text-[1rem] md:text-[1.25rem] font-normal text-black-3
+  @apply text-[1rem] md:text-[1.2rem] font-normal
 }
 
-.paragraph-3 {
+.paragraph-2 {
   @apply text-[.8rem] md:text-[1rem] font-bold uppercase
 }
 
-.paragraph-4 {
+.paragraph-3 {
   @apply text-[.8rem] font-normal
 }
 
-.paragraph-5 {
+.paragraph-4 {
   @apply text-[.7rem] lg:text-[.75rem]
 }
 
-.paragraph-6 {
-  @apply text-[.5rem] lg:text-[.6rem]
-}
-
 .text-link {
-  @apply text-[.8rem] sm:text-[1rem] font-bold uppercase text-black-3 hover:translate-y-[-.5px] hover:drop-shadow-sm
+  @apply text-[.8rem] font-bold uppercase text-primary-3 hover:translate-y-[-.5px] hover:drop-shadow-sm
 }
 
 /* ui */

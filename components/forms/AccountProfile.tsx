@@ -103,7 +103,7 @@ const AccountProfile = ({ user, btnTitle, onboarding }: AccountProps) => {
                     </div>
                     {/* avatar */}
                     <div className="flex flex-1 flex-col">
-                        <p className="paragraph-3 text-black-3 min-w-[10rem]">Avatar:</p>
+                        <p className="paragraph-2 text-black-3 min-w-[10rem]">Avatar:</p>
                         <div className="grid grid-cols-3 gap-0 w-[100%] lg:w-[80%]">
                             {
                                 avatarList.map((imageLink, index) => (
@@ -115,7 +115,7 @@ const AccountProfile = ({ user, btnTitle, onboarding }: AccountProps) => {
                             }
 
                         </div>
-                        <p className="mt-2 paragraph-4 text-primary-1">Unlock more avatars as you level up!</p>
+                        <p className="mt-2 paragraph-3 text-primary-1">Unlock more avatars as you level up!</p>
                     </div>
 
                 </div>

@@ -7,7 +7,7 @@ const Leftbar = async () => {
   const result = !user ? null : await fetchTopUsers();
 
   return (
-    <div className="hidden md:flex md:flex-wrap w-[15%] min-h-screen h-full bg-white fixed border-r-2 border-black-3">
+    <div className="hidden md:flex md:flex-wrap w-[15%] min-h-screen h-full bg-white fixed ">
       {!result || result?.users?.length === 0 ? (
         ''
       ) : (

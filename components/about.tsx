@@ -8,7 +8,7 @@ const About = ({ user }: { user: boolean }) => {
         <section className='section pl-[8%] mt-[5%] bg-white-1 flex flex-col items-center md:items-start justify-center p-4'>
             <div className='flex items-center mx-auto pr-[2rem]'>
                 <Image src={logo} alt='squad gains logo' className="h-[2.5rem] w-[2.5rem]" />
-                <h1 className="paragraph-3 text-primary-1">
+                <h1 className="paragraph-2 text-primary-1">
                     Squad Gains
                 </h1>
             </div>
@@ -22,9 +22,9 @@ const About = ({ user }: { user: boolean }) => {
                         />
                     </div>
                     <div className='flex flex-col items-center text-center md:text-left md:items-start w-[100%] p-2'>
-                        <h3 className='paragraph-3 text-black-3'>{dataItem.title}</h3>
+                        <h3 className='paragraph-2 text-black-3'>{dataItem.title}</h3>
                         {dataItem.details.map((item, index) => (
-                            <p key={`details${index}`} className="paragraph-1">{item}</p>
+                            <p key={`details${index}`} className="paragraph-1 text-black-3">{item}</p>
                         ))}
                     </div>
                 </div>

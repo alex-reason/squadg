@@ -12,24 +12,24 @@ const PointSystem = ({ category }: { category: 'cardio' | 'fullbody' | 'toning' 
         <article className='bg-primary-lighter rounded-lg m-2 p-2 flex flex-col sm:flex-row items-center gap-2 sm:gap-8'>
             <Image src={thumbsUp} alt='from Blush by Pau Barbaro' className='w-[2rem] sm:w-[5rem] h-auto opacity-[80%]' />
             <div>
-                <p className='paragraph-3 mb-2'>{category} Point System</p>
+                <p className='paragraph-2 mb-2'>{category} Point System</p>
                 {
                     category === 'cardio' ?
                         <>
                             {cardioPointSystem.map((info, index) =>
-                                <p className='paragraph-4' key={`cardiopointsystem-${index}`}>{info}</p>)
+                                <p className='paragraph-3' key={`cardiopointsystem-${index}`}>{info}</p>)
                             }
                         </>
                         : category === 'fullbody' ?
                             <>
                                 {fullBodyPointSystem.map((info, index) =>
-                                    <p className='paragraph-4' key={`fullbodypointsystem-${index}`}>{info}</p>)
+                                    <p className='paragraph-3' key={`fullbodypointsystem-${index}`}>{info}</p>)
                                 }
                             </>
                             :
                             <>
                                 {toningPointSystem.map((info, index) =>
-                                    <p className='paragraph-4' key={`fullbodypointsystem-${index}`}>{info}</p>)
+                                    <p className='paragraph-3' key={`fullbodypointsystem-${index}`}>{info}</p>)
                                 }
                             </>
                 }
