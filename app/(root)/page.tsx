@@ -12,7 +12,7 @@ export default async function Home() {
   return (
     <main className="min-h-full lg:p-0">
       <section className="section flex flex-col m-auto items-center md:items-start mt-10 p-4">
-        <div className="flex flex-col min-h-screen justify-center w-[100%]">
+        <div className="flex flex-col min-h-screen justify-center items-center w-[90%] mx-auto md:pr-10 ">
           {
             <Image src={homeTitle}
               className="h-[10rem] w-auto md:ml-[-4rem] object-contain drop-shadow-md"
@@ -22,7 +22,7 @@ export default async function Home() {
               Squad Gains
             </h1>
           }
-          <h3 className="paragraph-1 text-gray-1 py-1 px-2 w-[100%] md:w-[90%] text-center">Where friends and fitness come together</h3>
+          <h3 className="heading-2 text-gray-1 py-1 text-center">Where friends and fitness come together</h3>
         </div>
 
         <div className="mx-auto md:pr-10 min-h-[80vh] flex flex-col justify-center items-center w-[100%]">

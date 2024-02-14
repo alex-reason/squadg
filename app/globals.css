@@ -16,7 +16,7 @@ body {
 
 /* fonts */
 .heading-1 {
-  @apply text-[7.5rem] font-bold leading-none uppercase
+  @apply text-[3rem] md:text-[5rem] font-bold leading-none uppercase
 }
 
 .heading-2 {
