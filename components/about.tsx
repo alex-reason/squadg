@@ -6,7 +6,12 @@ import { aboutData as data } from '@/public/assets/data';
 const About = ({ user }: { user: boolean }) => {
     return (
         <section className='section pl-[8%] mt-[5%] bg-white-1 flex flex-col items-center md:items-start justify-center p-4'>
-            <Image src={logo} alt='squad gains logo' className="h-[5rem] w-[5rem]" />
+            <div className='flex items-center mx-auto pr-[2rem]'>
+                <Image src={logo} alt='squad gains logo' className="h-[2.5rem] w-[2.5rem]" />
+                <h1 className="paragraph-3 text-primary-1">
+                    Squad Gains
+                </h1>
+            </div>
             {data.map(dataItem => (
                 <div key={dataItem.id} className='my-4 flex flex-col md:flex-row items-center'>
                     <div className='flex items-center mr-[1rem] rounded-full'>

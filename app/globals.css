@@ -119,3 +119,18 @@ body {
 .cl-internal-b3fm6y {
   @apply bg-primary-2
 }
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 1;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax span {
+  display: block;
+  margin-right: 1rem;
+}
