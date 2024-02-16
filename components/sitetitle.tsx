@@ -8,8 +8,8 @@ const SiteTitle = () => {
     <div className="flex flex-col min-h-screen justify-center items-center w-[90%] mx-auto md:pr-10 ">
       <motion.div
       className="mx-auto md:pl-20"
-        initial={{ rotate: -3 }}
-        animate={{ rotate: 3 }}
+        initial={{ rotate: -5 }}
+        animate={{ rotate: 5 }}
         transition={{ ease: "linear", repeat: Infinity,  repeatType: "reverse", duration: 5 }}
       >
         {
