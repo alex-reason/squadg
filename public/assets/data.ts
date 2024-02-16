@@ -1,39 +1,45 @@
 import img4 from './Miroodles - Sticker.png';
 import img5 from './Miroodles - Sticker (1).png';
 import img6 from './Miroodles - Sticker (3).png';
+import about1Img from './about-1.png';
+import about2Img from './about-2.png';
+import about3Img from './about-3.jpg';
 
 export const aboutData = [
     {
         title: 'track your workouts',
         details: [
             'You will be able to record your workouts.',
-            'Each workout you do gains you points'
+            'Each workout you do gains you points.'
         ],
         btn: true,
         image: img5,
         alt: 'by Pablo Stanley from blush',
-        id: 'aboutData1'
+        id: 'aboutData1',
+        screenshot: about1Img,
     },
     {
         title: 'progress with friends',
         details: [
-            'Seeing friends and their progress may help motivate you',
+            'Seeing friends and their progress may help motivate you.',
             'Or make it a friendly competition!'
         ],
         image: img6,
         alt: 'by Pablo Stanley from blush',
-        id: 'aboutData2'
+        id: 'aboutData2',
+        screenshot: about2Img,
     },
 
     {
         title: 'level up your workout game',
         details: [
-            'Level up after reaching certain points',
-            'Unlock new features after reaching enough levels'
+            'Level up after reaching certain points.',
+            'Unlock new features after reaching enough levels.'
         ],
         image: img4,
         alt: 'by Pablo Stanley from blush',
-        id: 'aboutData3'
+        id: 'aboutData3',
+        screenshot: about3Img,
     },
 ] as const;
 
