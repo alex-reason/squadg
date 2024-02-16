@@ -41,7 +41,7 @@ export const aboutData = [
         id: 'aboutData3',
         screenshot: about3Img,
     },
-] as const;
+];
 
 
 export const cardioPoints = {

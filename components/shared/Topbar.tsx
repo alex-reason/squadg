@@ -3,12 +3,7 @@ import Link from "next/link"
 import { SignedIn, SignOutButton, useAuth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { PiSignOutBold } from "react-icons/pi";
-import { IoTrophyOutline } from "react-icons/io5";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { RiTrophyFill } from "react-icons/ri";
-import { IoAddCircleOutline } from "react-icons/io5";
-import { IoPeopleOutline } from "react-icons/io5";
-import { IoAddCircleSharp } from "react-icons/io5";
+import { IoTrophyOutline, IoAddCircleOutline, IoPeopleOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 
 const Topbar = () => {
