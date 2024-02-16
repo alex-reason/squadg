@@ -14,7 +14,7 @@ const Topbar = () => {
 
     return (
         <nav className="top-bottom-bars w-[100%] justify-end px-4 py-2 shadow-1 fixed top-0 right-0 z-20 min-h-[4rem] sm:h-auto">
-            <Link href="/" className="uppercase mr-auto font-bold text-[.8rem] sm:text-[1rem] text-primary-3 hover:translate-y-[-.5px] hover:drop-shadow-sm">
+            <Link href="/" className="uppercase mr-auto font-bold text-[1rem] text-primary-3 hover:translate-y-[-.5px] hover:drop-shadow-sm">
                 Squad Gains
             </Link>
             <SignedIn>

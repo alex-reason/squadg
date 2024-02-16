@@ -23,7 +23,7 @@ const SiteTitle = () => {
         }
 
       </motion.div>
-      <h3 className="heading-2 text-gray-1 py-1 text-center">Where friends and fitness come together</h3>
+      <h3 className="heading-2 text-black-3 py-1 text-center">Where friends and fitness come together</h3>
     </div>
   )
 }

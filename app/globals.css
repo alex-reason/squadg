@@ -36,7 +36,7 @@ body {
 }
 
 .paragraph-2 {
-  @apply text-[.8rem] md:text-[1rem] font-bold uppercase
+  @apply text-[1rem] font-bold uppercase
 }
 
 .paragraph-3 {
