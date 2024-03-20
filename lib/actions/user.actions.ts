@@ -130,6 +130,7 @@ export async function updateUserWorkout({
                 level: updatedLevel || 0
             },
             { upsert: true }
+
         );
         revalidatePath(`/profile/${userId}`)
     } catch (error: any) {

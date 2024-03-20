@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const UserProfile = ({ username, avatar, bio }: { username: string, avatar: string, bio?: string }) => {
     return (
-        <motion.div className="flex flex-col items-center lg:min-w-[50%] max-w-[50%]"
+        <motion.div className="flex flex-col items-center lg:min-w-[40%] max-w-[40%]"
             initial={{ opacity: .5 }}
             animate={{ opacity: 1 }}
             transition={{ease: "linear",}}
